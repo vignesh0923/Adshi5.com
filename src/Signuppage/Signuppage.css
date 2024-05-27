@@ -1,0 +1,154 @@
+
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(90deg, #2c3e50, #3498db);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+  
+  .container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .toggle-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .toggle-button {
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .toggle-button.active {
+    background: #0056b3;
+  }
+  
+  .toggle-button:hover {
+    background: #0056b3;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-container h3{
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  .form-container h2{
+margin-bottom: 10px;
+  }
+
+
+
+  .form-container p{
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .form-group label {
+    margin-bottom: 5px;
+    display: flex;
+  }
+  
+  .form-group input {
+    width: 300px;
+    max-width: 300px;
+    height: 45px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1.5px solid lightgrey;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0px 0px 10px -18px;
+  }
+
+  input:hover {
+    border: 2px solid lightgrey;
+    box-shadow: 0px 0px 20px -17px;
+  }
+  
+  input:active {
+    transform: scale(0.95);
+  }
+  
+  input:focus {
+    border: 2px solid grey;
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .form-actions button[type="submit"] {
+    padding: 10px 35px;
+    border: none;
+    background: #007bff;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+
+  .form-actions button[type="button"] {
+    padding: 10px 20px;
+    border: none;
+    background: #007bff;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+  
+  .form-actions button:hover {
+    background: #0056b3;
+  }
+  
+  .form-actions button[type="button"] {
+    background: #6c757d;
+  }
+  
+  .form-actions button[type="button"]:hover {
+    background: #5a6268;
+  }
+
+
+  .eye{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 150px;
+  }
+ 
