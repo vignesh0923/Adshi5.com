@@ -1,11 +1,11 @@
-// App.js
+
 import React, { useState } from 'react';
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 
-// Firebase configuration
+
 const firebaseConfig = {
   
   apiKey: "AIzaSyCIlQql7jozAyIkmHRjKvzNRSDy2Py5j4A",
@@ -16,7 +16,7 @@ const firebaseConfig = {
   appId: "1:22666689037:web:8651aa5585b9a2cf41f344"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
@@ -26,13 +26,13 @@ const App = () => {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
-  const [passwordMatch, setPasswordMatch] = useState(true); // Track if passwords match
+  const [passwordMatch, setPasswordMatch] = useState(true); 
   const [loginError, setLoginError] = useState('');
 
   const handleSignup = async (e) => {
     e.preventDefault();
     if (password !== confirmPassword) {
-      setPasswordMatch(false); // Set passwords match state to false
+      setPasswordMatch(false); 
       return;
     }
 
@@ -40,8 +40,7 @@ const App = () => {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       alert("Signup successful");
 
-      // Redirect to login page after successful signup
-      setShowSignup(false); // Hide signup form
+      setShowSignup(false); 
     } catch (error) {
       alert(error.message);
     }
@@ -53,7 +52,6 @@ const App = () => {
       await signInWithEmailAndPassword(auth, email, password);
       alert("Login successful");
 
-      // Clear input fields
       setEmail('');
       setPassword('');
       setLoginError('');
@@ -70,8 +68,8 @@ const App = () => {
     setEmail('');
     setPassword('');
     setConfirmPassword('');
-    setPasswordMatch(true); // Reset password match state
-    setLoginError(''); // Reset login error
+    setPasswordMatch(true); 
+    setLoginError(''); 
   };
 
   return (
